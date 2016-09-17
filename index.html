@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>Outbreak Monitor by Mavericks</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -68,9 +68,26 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-3 col-xl-2">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <form>
+    <div class="form-group">
+      <label for="medcode">Medical Code</label>
+      <input type="text" class="form-control" id="medcode">
+    </div>
+        <div class="okOr">or</div>
+    <div class="form-group">
+      <label for="medsymptom">Symptom/Desease</label>
+      <input type="text" class="form-control" id="medsymptom">
+    </div>
+    <div class="form-group">
+put time slider component here
+        <br />
+    6 months <a>1 year</a> <a>2 years</a>
+    </div>
+    <div class="form-group">
+      <label for="medprovider">Hospital</label>
+      <input type="text" class="form-control" id="medprovider">
+    </div>           
+  </form>  
         </div>
         <div class="col-sm-12 col-md-9 col-xl-10">
           put map here
