@@ -10,6 +10,7 @@ body {
 }
 a {
     cursor: pointer;
+    color: #0774a7;
 }
 header {
     text-align: center;
@@ -42,11 +43,26 @@ h2 {
 }
 .okOr {
     display: inline;
+    background-color: rgba(148,204,106,1);
     line-height: 0;
     padding:10px;
-    margin:10px;
-    border:solid thin #fff;
+    margin:20px;
     border-radius: 50%;
+}
+.okTimeSliderControls span {
+    padding:5px 10px;
+    font-size: 80%;
+    background-color: rgba(148,204,106,1);    
+}
+.okTimeSliderControls a {
+    margin-left: 1px;
+    padding:5px 10px;
+    font-size: 80%;
+    background-color: rgba(255,255,255,.3);  
+}
+.okTimeSliderControls a:hover {
+    background-color: rgba(255,255,255,.5); 
+    text-decoration: none;
 }
 footer {
     color: #fff;
