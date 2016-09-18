@@ -36,7 +36,7 @@
       "leg pain",
       "back pain",
       "head ache",
-      "cold",
+      "Cold",
       "Flue",
    	 ];
    	 $( "#medcode" ).autocomplete({
@@ -83,9 +83,43 @@
 		});
 	</script>
 
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+    google.charts.load('upcoming', { 'packages': ['map'] });
+    google.charts.setOnLoadCallback(drawMap);
+
+    function drawMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['Country', 'Population'],
+        ['China', 'China: 1,363,800,000'],
+        ['India', 'India: 1,242,620,000'],
+        ['US', 'US: 317,842,000'],
+        ['Indonesia', 'Indonesia: 247,424,598'],
+        ['Brazil', 'Brazil: 201,032,714'],
+        ['Pakistan', 'Pakistan: 186,134,000'],
+        ['Nigeria', 'Nigeria: 173,615,000'],
+        ['Bangladesh', 'Bangladesh: 152,518,015'],
+        ['Russia', 'Russia: 146,019,512'],
+        ['Japan', 'Japan: 127,120,000']
+      ]);
+
+    var options = {
+      showTooltip: true,
+      showInfoWindow: true
+    };
+
+    var map = new google.visualization.Map(document.getElementById('chart_div'));
+
+    map.draw(data, options);
+
+	};
+  </script>
+
+
   </head>
 
   <body>
+<<<<<<< HEAD
 <!--
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -129,25 +163,37 @@
         </div>    
       </div>
     </div>
+=======
+    <header>
+      <div class="row">
+        <div class="col-sm-12">      
+            <h1>Outbreak Monitor</h1>
+            <h2>The Story of Health</h2>
+        </div>    
+      </div>
+    </header>
+>>>>>>> bb01f18a42f31cf40948e8d54de466ec979d44e8
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-3 col-xl-2">
+        <div class="col-sm-12 col-md-3 col-xl-2 okFilters">
           <form>
     <div class="form-group">
+<<<<<<< HEAD
       <label for="medcode">Medical Code</label>
-     <!-- <input type="text" class="form-control" id="medcode">
+      <input type="text" class="form-control" id="medcode">
 		<div id="page-wrap">
 
-		-->
+	
 		<br>
 		<select id="json-one">
-			<option selected value="base">Please Select</option>
+			<option selected value="medcode">Please Select</option>
 			<option value="Cold">Cold</option>
 			<option value="Fever">Fever</option>
 		</select>
 	
 		<br />
 		<div class="okOr">or</div>
+		<div class="Symptoms/Disease">Symptoms/Disease</div>
 	
 		<select id="json-two">
 			<option>Symptoms/Disease</option>
@@ -162,17 +208,37 @@
 	</select>
 	-->
     <div class="form-group">
+=======
+      <input class="form-control input-lg" type="text" placeholder="Medical Code" id="medcode" length="10" size="10">
+    </div>
+        <div class="okOr">or</div><br />
+    <div class="form-group">
+      <input class="form-control input-lg" type="text" placeholder="Symptom/Disease" id="medsymptom">
+    </div>
+    <div class="form-group">
+      <input class="form-control input-lg" type="text" placeholder="Hospital" id="hospital">
+    </div>   
+    <div class="form-group">
+        
+        
+        
+>>>>>>> bb01f18a42f31cf40948e8d54de466ec979d44e8
 put time slider component here
         <br />
     6 months <a>1 year</a> <a>2 years</a>
     </div>
+<<<<<<< HEAD
     <div class="form-group">
       <label for="medprovider">Hospital</label>
       <input type="text" class="form-control" id="medprovider">
     </div>           
+=======
+>>>>>>> bb01f18a42f31cf40948e8d54de466ec979d44e8
   </form>  
         </div>
         <div class="col-sm-12 col-md-9 col-xl-10">
+	<div id="chart_div"></div>
+
           put map here
        </div>
       </div>
