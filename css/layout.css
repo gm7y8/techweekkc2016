@@ -1,0 +1,12 @@
+/* layout css */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.okHead, footer {
+    color:#fff;
+    background-color: #0e94d3;
+}
+.okFilters {
+    color:#fff;
+    background-color: #94cc6a;
+}
