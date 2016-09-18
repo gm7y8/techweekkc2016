@@ -28,34 +28,61 @@
   	<script>
   	$( function() {
    	 var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
+      "fevert",
+      "chronic disease",
+      "appendix",
+      "colon cancer",
+      "breast cancer",
+      "leg pain",
+      "back pain",
+      "head ache",
+      "cold",
+      "Flue",
    	 ];
    	 $( "#medcode" ).autocomplete({
       	source: availableTags
    	 });
   	} );
   	</script>
+<script>
+		$(function() {
+		
+			$("#text-one").change(function() {
+				$("#text-two").load("textdata/" + $(this).val() + ".txt");
+			});
+			
+			$("#json-one").change(function() {
+			
+				var $dropdown = $(this);
+			
+				$.getJSON("jsondata/data.json", function(data) {
+				
+					var key = $dropdown.val();
+					var vals = [];
+										
+					switch(key) {
+						case 'Cold':
+							vals = data.Cold.split(",");
+							break;
+						case 'Fever':
+							vals = data.Fever.split(",");
+							break;
+						case 'base':
+							vals = ['Please choose from above'];
+					}
+					
+					var $jsontwo = $("#json-two");
+					$jsontwo.empty();
+					$.each(vals, function(index, value) {
+						$jsontwo.append("<option>" + value + "</option>");
+					});
+			
+				});
+			});
+
+		});
+	</script>
+
   </head>
 
   <body>
@@ -102,24 +129,38 @@
         </div>    
       </div>
     </div>
-	<div class="ui-widget">
-		
- 	 		<label for="tags">Tags: </label>
- 	 		<input id="tags">
-	</div>
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-3 col-xl-2">
           <form>
     <div class="form-group">
       <label for="medcode">Medical Code</label>
-      <input type="text" class="form-control" id="medcode">
-    </div>
-        <div class="okOr">or</div>
-    <div class="form-group">
-      <label for="medsymptom">Symptom/Desease</label>
-      <input type="text" class="form-control" id="medsymptom">
-    </div>
+     <!-- <input type="text" class="form-control" id="medcode">
+		<div id="page-wrap">
+
+		-->
+		<br>
+		<select id="json-one">
+			<option selected value="base">Please Select</option>
+			<option value="Cold">Cold</option>
+			<option value="Fever">Fever</option>
+		</select>
+	
+		<br />
+		<div class="okOr">or</div>
+	
+		<select id="json-two">
+			<option>Symptoms/Disease</option>
+		</select>
+	
+	 </div>
+	<!-- <div class="okOr">or</div>
+	<select class="ui dropdown">
+  	<option value="">Symptoms/Disease</option>
+  	<option value="1">Fever</option>
+ 	 <option value="0">cold</option>
+	</select>
+	-->
     <div class="form-group">
 put time slider component here
         <br />
