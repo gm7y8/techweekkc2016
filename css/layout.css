@@ -1,7 +1,12 @@
+
 /* layout css */
 body {
     font-family: Helvetica, sans-serif;
     letter-spacing: .1em;
+    background:transparent !important;
+    background-image: url('/../images/ok-radar-large.png') !important;
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 a {
     cursor: pointer;
@@ -9,7 +14,21 @@ a {
 header, footer {
     color:#fff;
     text-align: center;
-    background-color: #0e94d3;
+    background-color: rgba(14,148,211,.9);
+}
+h1 {
+    padding-top: 1.1em;
+    font-weight: 600;
+    font-size: 200%;
+    letter-spacing: .2em;
+    color: rgba(255,255,255,.9);
+}
+h2 {
+    font-size: 80%;
+    letter-spacing: 1em;
+    margin-bottom: 0;
+    color: rgba(255,255,255,.7);
+    background-color: #0774a7;
 }
 h1 {
     padding-top: 1.1em;
@@ -31,7 +50,7 @@ footer {
 .okFilters {
     padding-top: 1em;
     color:#fff;
-    background-color: #94cc6a;
+    background-color: rgba(148,204,106,.7);
 }
 .okOr {
     display: inline;
