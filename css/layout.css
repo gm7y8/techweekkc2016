@@ -22,6 +22,8 @@ h1 {
     font-size: 200%;
     letter-spacing: .2em;
     color: rgba(255,255,255,.9);
+    background-image: url('/../images/ok-radar-logo.png');
+    background-repeat:no-repeat;
 }
 h2 {
     font-size: 80%;
