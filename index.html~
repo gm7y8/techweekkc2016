@@ -7,17 +7,13 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="../../favicon.ico">
+
     <title>Outbreak Monitor by Mavericks</title>
-<<<<<<< HEAD
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" >
 
-=======
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/layout.css" rel="stylesheet">
->>>>>>> 5c143cfa5c786b38abdf8c6b5cbf30c518ffa1b4
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -32,16 +28,28 @@
   	<script>
   	$( function() {
    	 var availableTags = [
-      "fevert",
-      "chronic disease",
-      "appendix",
-      "colon cancer",
-      "breast cancer",
-      "leg pain",
-      "back pain",
-      "head ache",
-      "cold",
-      "Flue",
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
    	 ];
    	 $( "#medcode" ).autocomplete({
       	source: availableTags
@@ -86,60 +94,54 @@
       </div>
     </div>
 -->
-    <header>
-      <div class="row">
-        <div class="col-sm-12">      
-            <h1>Outbreak Monitor <span class="tagline">The Story of Health</span></h1>
-        </div>    
-      </div>
-    </header>
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-3 col-xl-2 okFilters">
+        <div class="col-sm-12">      
+            <h1><center>Health Monitor</center></h1>
+            <h2><center>Track outbreaks</center></h2>
+        </div>    
+      </div>
+    </div>
+	<div class="ui-widget">
+		
+ 	 		<label for="tags">Tags: </label>
+ 	 		<input id="tags">
+	</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-3 col-xl-2">
           <form>
     <div class="form-group">
-      <input class="form-control input-lg" type="text" placeholder="Medical Code" id="medcode" length="10" size="10">
+      <label for="medcode">Medical Code</label>
+      <input type="text" class="form-control" id="medcode">
     </div>
-        <div class="okOr">or</div><br />
+        <div class="okOr">or</div>
     <div class="form-group">
-      <input class="form-control input-lg" type="text" placeholder="Symptom/Disease" id="medsymptom">
+      <label for="medsymptom">Symptom/Desease</label>
+      <input type="text" class="form-control" id="medsymptom">
     </div>
     <div class="form-group">
-      <input class="form-control input-lg" type="text" placeholder="Hospital" id="hospital">
-    </div>   
-    <div class="form-group">
-        
-        
-        
 put time slider component here
         <br />
     6 months <a>1 year</a> <a>2 years</a>
-        
-        
-        
-        
-        
-        
     </div>
+    <div class="form-group">
+      <label for="medprovider">Hospital</label>
+      <input type="text" class="form-control" id="medprovider">
+    </div>           
   </form>  
         </div>
         <div class="col-sm-12 col-md-9 col-xl-10">
-            
-            
-            
           put map here
-            
-            
-            
-            
-            
        </div>
       </div>
-      </div>
-      
+
+      <hr>
+
       <footer>
         <p>&copy; 2016 The Mavericks</p>
       </footer>
+    </div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
