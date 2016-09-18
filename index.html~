@@ -28,16 +28,28 @@
   	<script>
   	$( function() {
    	 var availableTags = [
-      "fevert",
-      "chronic disease",
-      "appendix",
-      "colon cancer",
-      "breast cancer",
-      "leg pain",
-      "back pain",
-      "head ache",
-      "cold",
-      "Flue",
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
    	 ];
    	 $( "#medcode" ).autocomplete({
       	source: availableTags
@@ -90,6 +102,11 @@
         </div>    
       </div>
     </div>
+	<div class="ui-widget">
+		
+ 	 		<label for="tags">Tags: </label>
+ 	 		<input id="tags">
+	</div>
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-3 col-xl-2">
