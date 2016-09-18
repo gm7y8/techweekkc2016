@@ -2,6 +2,9 @@
 body {
     font-family: Helvetica, sans-serif;
     letter-spacing: .1em;
+    background-image:url('images/ok-radar-large.png');
+    background-repeat:no-repeat;
+    background-size:100%;
 }
 a {
     cursor: pointer;
